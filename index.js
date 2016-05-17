@@ -67,9 +67,9 @@ function tapToStart (options, done) {
     if (touchTime && currTime - touchTime > 800) return cleanup()
     raf(render)
 
-    var tp = circ(((currTime - start - 350) / 1500) % 1)
-    var tt = expo(Math.max(0, (currTime - touchTime) / 800))
-    var ts = expo(Math.min(1, (currTime - start) / 500))
+    var tp = circ(((currTime - start - 350) / 1500) % 1) || 0
+    var tt = expo(Math.max(0, (currTime - touchTime) / 800)) || 0
+    var ts = expo(Math.min(1, (currTime - start) / 500)) || 0
 
     if (touchTime !== null) {
       var tt1 = Math.min(1, tt * 2)
