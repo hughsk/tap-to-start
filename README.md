@@ -16,6 +16,7 @@ Creates a new `tap-to-start` overlay. Accepts the following options:
 * `background`: the color of the background. Defaults to `transparent`.
 * `accent`: the color of the tap icon. Defaults to `background`, or `#fff` if not specified.
 * `skip`: if truthy, skip the UI and call `done` in the next frame. Useful if you only want the UI to be visible if user input is required to continue.
+* `parent`: optional, defaults to `document.body`. Set the element the button is attached to
 
 `done` is called when the UI is tapped/clicked and begins to transition out.
 

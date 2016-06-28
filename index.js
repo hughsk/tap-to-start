@@ -12,6 +12,7 @@ function tapToStart (options, done) {
   var bgColor = options.background || 'transparent'
   var fgColor = options.foreground || '#000'
   var acColor = options.accent || options.background || '#fff'
+  var parentEl = options.parent || document.body
   if (options.skip) return raf(done)
 
   var container = SVG('svg')
@@ -47,7 +48,7 @@ function tapToStart (options, done) {
   render()
   resize()
 
-  document.body.appendChild(container)
+  parentEl.appendChild(container)
 
   window.addEventListener('resize', resize, false)
   window.addEventListener('touchstart', tap, false)
