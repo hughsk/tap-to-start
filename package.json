@@ -5,6 +5,11 @@
     "start": "budo demo.js:bundle.js",
     "bundle": "browserify demo.js -o bundle.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hughsk/tap-to-start.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "domify": "^1.4.0",
     "eases": "^1.0.8",
